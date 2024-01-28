@@ -15,6 +15,8 @@ public class Main {
         System.out.println("Name = " + one.getName() + ", Author = " + book1.getFirstName() + " " + book1.getLastName() + ", Year = " + one.getPublicationYear());
         System.out.println("Name = " + two.getName() + ", Author = " + book2.getFirstName() + " " + book2.getLastName() + ", Year = " + two.getPublicationYear());
 
+        System.out.println(one);
+
 
     }
 }

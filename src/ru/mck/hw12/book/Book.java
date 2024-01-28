@@ -41,10 +41,11 @@ public class Book {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book book = (Book) other;
         return publicationYear == book.publicationYear && Objects.equals(name, book.name) && Objects.equals(author, book.author);
     }
 
@@ -55,10 +56,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
-                "name='" + name + '\'' +
-                ", publicationYear=" + publicationYear +
-                ", author=" + author +
-                '}';
+        return "Книга: " + "Название " + '"' + name + '"' + ", Год издания - " + publicationYear + ' ' + author;
     }
 }
